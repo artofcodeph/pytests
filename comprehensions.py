@@ -215,3 +215,42 @@ print("\n8. Any() & All()")
 test_list = [True, False, True]
 print(f"Any (at least one): {any(test_list)}")
 print(f"All (every one): {all(test_list)}")
+
+
+# ==============================================================================
+# GRAND FINALE: COMBINING CONCEPTS
+# ==============================================================================
+print("\n--- GRAND FINALE: THE 'PYTHONIC' DATA PIPELINE ---\n")
+
+# Scenario: Processing raw string readings using multiple tools at once.
+raw_readings = [
+    "temp:25.5:C", "temp:error:C", "humidity:45:H", 
+    "temp:30.2:C", "pressure:1012:P", "humidity:error:H"
+]
+
+# 1. Generator Expression: Processes data lazily (memory efficient)
+# 2. Walrus Operator (:=): Splits string and checks length in one go
+# 3. Nested Validation: Ensures we only process valid numerical data
+pipeline = (
+    {"type": parts[0], "value": float(parts[1])}
+    for r in raw_readings
+    if len(parts := r.split(":")) == 3 
+    if parts[1].replace('.', '', 1).isdigit()
+)
+
+# 4. Collections.Counter + List Comprehension: Summarize the results
+# We consume the generator here to create a summary report
+summary = collections.Counter(item["type"] for item in pipeline)
+
+print(f"Final Data Pipeline Report: {dict(summary)}")
+
+"""
+MOTIVATION FOR THIS EXAMPLE:
+This 'Data Pipeline' pattern demonstrates the true power of Pythonic code:
+1. Efficiency: The generator ensures we don't store intermediate lists.
+2. Readability: Complex logic (split -> validate -> cast -> dict) is handled in a single
+   declarative block rather than a 10-line nested for-loop.
+3. Expressiveness: Using the Walrus operator (:=) inside the generator allows us to
+   reuse the 'parts' variable for both the filter and the final output without
+   re-calculating the split() operation.
+"""
