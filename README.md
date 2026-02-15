@@ -21,7 +21,7 @@ Exploring the boundaries of the Python language:
 - **[hash_tester.py](hash_tester.py)**: Investigating object hashability and dictionary key requirements.
 
 ### 🧪 Misc & OOP
-- **[my_dog.py](my_dog.py)**: Basics of Object-Oriented Programming (Classes and Instances).
+- **[oop_guide.py](oop_guide.py)**: Comprehensive guide to Object-Oriented Programming (Classes, Inheritance, and Polymorphism).
 - **[main_file.py](main_file.py)**: General testing ground for ephemeral ideas.
 
 ## 🚀 Getting Started
