@@ -141,8 +141,3 @@ if __name__ == "__main__":
     # 4. Polymorphism & Iteration
     # animal_concert works with any list-like or iterable of Animals
     animal_concert(my_zoo) # my_zoo is iterable due to __iter__
-
-    # 5. Legacy logic preserved
-    def calculate_force(mass, acc):
-        return mass * acc
-    print(f"\nForce Calculation (legacy logic): {calculate_force(9, 7)}")
