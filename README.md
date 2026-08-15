@@ -62,7 +62,7 @@ python api_network_demo.py
 
 ---
 
-### 🎉 Happy Coding!
-**Arthur Abogadil**
+## 🎉 Happy Coding!
+**- Arthur Abogadil**
 
 > *"Let all that you do be done with love."* — 1 Corinthians 16:14
