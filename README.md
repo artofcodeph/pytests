@@ -59,3 +59,11 @@ python api_network_demo.py
 ## 🛠️ Requirements
 - Python 3.9+
 - Dependencies listed in `requirements.txt` (`requests`)
+
+---
+
+### 🎉 Happy Coding!
+**Arthur Abogadil**
+
+> *"Let all that you do be done with love."* — 1 Corinthians 16:14  
+> *(With love do all things)*
